@@ -1,189 +1,163 @@
-   background-color: #060606;
- }
- 
- :root {
-   --accent-blue: #d9d9d9;
-   --bg-dark: #060606;
-   --text-light: #f5f5f5;
-   --nav-bg: rgb(0, 0, 0);
- }
- 
- body {
-   margin: 0;
-   font-family: 'Inter', sans-serif;
-   background-color: var(--bg-dark);
-   color: var(--text-light);
-   min-height: 100vh;
-   background:
-+    radial-gradient(70% 28% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(170, 170, 170, 0.08) 42%, rgba(20, 20, 20, 0) 80%),
-     radial-gradient(52% 40% at 50% 58%, rgba(255, 255, 255, 0.22) 0%, rgba(145, 145, 145, 0.13) 40%, rgba(20, 20, 20, 0) 76%),
-     radial-gradient(30% 22% at 50% 52%, rgba(255, 255, 255, 0.14) 0%, rgba(130, 130, 130, 0.08) 48%, rgba(18, 18, 18, 0) 82%),
-     linear-gradient(180deg, #040404 0%, #090909 52%, #0f0f0f 100%);
- }
- 
- .navbar {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 1.35rem 3.2rem;
-   position: fixed;
-   width: 100%;
-   top: 0;
-   z-index: 100;
-   box-sizing: border-box;
-   background: var(--nav-bg);
-   backdrop-filter: blur(10px);
-   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
- }
- 
- .logo {
-   width: 52px;
-   height: 52px;
-   object-fit: contain;
-   border-radius: 12px;
-   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 8px 22px rgba(0, 0, 0, 0.45);
-   background: rgba(255, 255, 255, 0.03);
- }
- 
- .nav-links a {
-   text-decoration: none;
-   color: rgba(255, 255, 255, 0.84);
-   margin-left: 2rem;
-   font-size: 0.9rem;
-   font-weight: 500;
-   transition: all 0.25s ease;
- }
- 
- .nav-links a:hover {
-   color: #ffffff;
-   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
- }
- 
--.settings-btn {
--  background: linear-gradient(180deg, #252525 0%, #111111 100%);
-+
-+.nav-links a.active {
-+  color: #ffffff;
-+  font-weight: 700;
-+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
-+}
-+
-+.nav-links a.tomodachi-link.active {
-   color: #f8f8f8 !important;
-   padding: 0.5rem 0.95rem;
-   border-radius: 999px;
-   border: 1px solid rgba(255, 255, 255, 0.25);
-+  background: linear-gradient(180deg, #252525 0%, #111111 100%);
-   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.45);
-+  text-shadow: none;
- }
- 
--.settings-btn:hover {
-+.nav-links a.tomodachi-link.active:hover {
-   color: #ffffff !important;
-   background: linear-gradient(180deg, #303030 0%, #161616 100%);
-   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 24px rgba(0, 0, 0, 0.5);
- }
- 
--.nav-links a.active {
--  color: #ffffff;
--  font-weight: 700;
--}
--
- .centered-layout {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   min-height: 100vh;
-   padding-top: 80px;
-   text-align: center;
- }
- 
- .hero-section {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
- }
- 
- .standard-layout {
-   padding: 120px 10% 50px 10%;
-   max-width: 1200px;
-   margin: 0 auto;
- }
- 
- .main-title {
-   width: 100%;
-   text-align: center;
-   font-size: 4rem;
-   font-weight: 700;
-   margin: 0.9rem auto 2rem;
-   text-shadow: 0 0 16px rgba(255, 255, 255, 0.16);
- }
- 
- .search-wrapper {
-   width: min(600px, calc(100% - 40px));
-   margin: 0 auto;
-   padding: 0;
- }
- 
- .blue-focus-input {
-   width: 100%;
-   padding: 18px 30px;
-   font-size: 1.1rem;
-   border-radius: 50px;
-   border: 1px solid rgba(255, 255, 255, 0.28);
--  background: rgba(255, 255, 255, 0.08);
-+  background:
-+    radial-gradient(62% 180% at 50% 50%, rgba(110, 110, 110, 0.34) 0%, rgba(68, 68, 68, 0.2) 32%, rgba(24, 24, 24, 0.9) 68%, rgba(0, 0, 0, 1) 100%),
-+    linear-gradient(180deg, #090909 0%, #000000 100%);
-   color: #ffffff;
-   text-align: center;
-   outline: none;
-   transition: all 0.25s ease;
- }
- 
- .blue-focus-input:focus {
--  border-color: rgba(255, 255, 255, 0.75);
--  background: rgba(20, 20, 20, 0.85);
-+  border-color: rgba(255, 255, 255, 0.55);
-+  background: #5b5b5b;
-   box-shadow: 0 0 14px rgba(255, 255, 255, 0.18);
-   transform: scale(1.01);
- }
- 
- .blue-focus-input::placeholder {
-   color: rgba(255, 255, 255, 0.45);
- }
-+
-+.game-shell {
-+  min-height: 100vh;
-+  padding: 106px 20px 20px;
-+}
-+
-+.game-shell-header {
-+  display: flex;
-+  justify-content: space-between;
-+  align-items: center;
-+  gap: 16px;
-+  max-width: 1200px;
-+  margin: 0 auto 16px;
-+}
-+
-+.game-shell-header h2 {
-+  margin: 0;
-+}
-+
-+#tomodachi-frame {
-+  width: min(1200px, 100%);
-+  height: calc(100vh - 180px);
-+  margin: 0 auto;
-+  display: block;
-+  border: 1px solid rgba(255, 255, 255, 0.28);
-+  border-radius: 12px;
-+  background: #000000;
-+}
+html {
+  background-color: #060606;
+}
+
+:root {
+  --accent-blue: #d9d9d9;
+  --bg-dark: #060606;
+  --text-light: #f5f5f5;
+  --nav-bg: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  background:
+    radial-gradient(70% 28% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(170, 170, 170, 0.08) 42%, rgba(20, 20, 20, 0) 80%),
+    radial-gradient(52% 40% at 50% 58%, rgba(255, 255, 255, 0.22) 0%, rgba(145, 145, 145, 0.13) 40%, rgba(20, 20, 20, 0) 76%),
+    radial-gradient(30% 22% at 50% 52%, rgba(255, 255, 255, 0.14) 0%, rgba(130, 130, 130, 0.08) 48%, rgba(18, 18, 18, 0) 82%),
+    linear-gradient(180deg, #040404 0%, #090909 52%, #0f0f0f 100%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35rem 3.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 8px 22px rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.84);
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+
+.nav-links a.active {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+.centered-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.standard-layout {
+  padding: 120px 10% 50px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0.9rem auto 2rem;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.16);
+}
+
+.search-wrapper {
+  width: min(600px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 0;
+}
+
+.blue-focus-input {
+  width: 100%;
+  padding: 18px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background:
+    radial-gradient(62% 180% at 50% 50%, rgba(110, 110, 110, 0.34) 0%, rgba(68, 68, 68, 0.2) 32%, rgba(24, 24, 24, 0.9) 68%, rgba(0, 0, 0, 1) 100%),
+    linear-gradient(180deg, #090909 0%, #000000 100%);
+  color: #ffffff;
+  text-align: center;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.blue-focus-input:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: #5b5b5b;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.18);
+  transform: scale(1.01);
+}
+
+.blue-focus-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.game-shell {
+  min-height: 100vh;
+  padding: 106px 20px 20px;
+}
+
+.game-shell-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto 16px;
+}
+
+.game-shell-header h2 {
+  margin: 0;
+}
+
+#tomodachi-frame {
+  width: min(1200px, 100%);
+  height: calc(100vh - 180px);
+  margin: 0 auto;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  background: #000000;
+}
