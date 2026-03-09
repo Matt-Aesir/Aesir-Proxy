@@ -62,7 +62,7 @@
     addBeforeUnloadProtection();
   </script>
 
-  <video id="soobinVideo" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999;" controls>
+ <video id="soobinVideo" muted autoplay style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999;" controls>
   <source src="extra/google.mp4" type="video/mp4">
 </video>
 
@@ -75,7 +75,8 @@ document.addEventListener("keydown", function(e) {
   if (typed.includes("soobin")) {
     const video = document.getElementById("soobinVideo");
     video.style.display = "block";
-    video.play();
+    video.currentTime = 0;
+    video.play().catch(() => {});
     typed = "";
   }
 
