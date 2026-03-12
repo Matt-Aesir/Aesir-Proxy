@@ -181,6 +181,8 @@ body.home-page {
 
 .game-shell-header h2 {
   margin: 0;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.02em;
 }
 
 #tomodachi-frame {
